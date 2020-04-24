@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
     //check the webhook event is from page subcrption 
   // Parse the request body from the POST
   // Check the webhook event is from a Page subscription
-  if (body.object === 'page') {
+    if (body.object === 'page') {
 
     // Iterate over each entry - there may be multiple if batched
     body.entry.forEach(function(entry) {
@@ -119,6 +119,7 @@ app.get('/', function (req, res) {
 
   //sends response message via send API of facebook
   function callSendAPI(sender_psid , response) {
+    //testing this file for github
     let request_body = {
       "recipient": {
         "id": sender_psid
